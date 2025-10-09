@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/mi-favicon.png" />
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Building Your Portfolio</title>
 </head>
 <body>
 
     <header>
-        <a href = "#main-content">Skip to Main Content</a>
-        <img src="images/UMSI_sig-marketing-U.jpg" alt="UMSI Logo">
+        <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+        <img src="images/UMSI_sig-marketing-U.png" alt="UMSI Logo">
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "resume.html">Resume & Cover Letters</a></li>
                 <li><a href = "networking.html">Networking & Connections</a></li>
-                <li><a href = "portfolio.html">Portfolio</a></li>
+                <li><a href = "portfolio.html" aria-current="page">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <!-- Hero Image and Intro Section -->
-        <section>
+    <main class = "container" id="main-content">
+         <!-- <nav class = "side-nav" aria-label="Page Sections">
+            <ul>
+                <li><a href="#hero">Introduction</a></li>
+                <li><a href="#what-is-a-portfolio">What is a Portfolio?</a></li>
+                <li><a href="#coded-vs-design-portfolio">Coded vs. Design Portfolio</a></li>
+                <li><a href="#what-should-i-include">What Should I Include?</a></li>
+                <li><a href="#portfolio-faq">Portfolio FAQ</a></li>
+            </ul>
+         </nav> -->
+         <!-- Hero Image and Intro Section -->
+        <section id = "hero">
             <h1>Building Your Portfolio</h1>
             <img src="images/UMSI_SI662_MHI_CLASSROOM_02.jpg" alt="UMSI students work together in a Health Informatics class">
             <p>
@@ -35,7 +47,7 @@
             UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
         </section>
         <!-- Portfolio Content -->
-        <section>
+        <section id = "what-is-a-portfolio">
             <h2>What is a Portfolio?</h2>
             <p>
                 A portfolio is a digital collection that showcases your skills, experiences, and growth in career-related projects. A portfolio is more than just displaying your work. It's about showcasing who you are and what makes you different from other applicants in your field - whether it is in user experience, data science, librarianship, health informatics, or another field.
@@ -57,7 +69,7 @@
             website objectives": and then pasted the client objectives
             Copilot. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
 
-        <section>
+        <section id = "coded-vs-design-portfolio">
             <h2>Coded vs. Design Portfolio</h2>
             <p>
                 There are two main approaches: <strong>coded portfolios</strong> and <strong>design platform portfolios</strong>. Each has its own advantages, so consider your technical skills, time investment, and the type of work you want to showcase when making your choice.
@@ -145,7 +157,7 @@
             </div>
         </section>
 
-        <section>
+        <section id = "what-should-i-include">
             <h2>What Should I Include?</h2>
             <p>
                 Portfolios don't have a clear "right" or "wrong" way to be structured. However, there are some common sections and elements that most effective portfolios include. <br>
@@ -201,7 +213,7 @@
                 and then copied and pasted the client objectives & project requirements.
                 UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
 
-        <section>
+        <section id = "portfolio-faq">
             <h2>Portfolio FAQ</h2>
             <ul>
                 <li>
@@ -233,13 +245,13 @@
 
 <footer>
     <div>
-      <img src="images/UMSI_signature_vertical_U_blue.jpg" alt="UMSI logo.">
+      <img src="images/UMSI_Logo_Footer.png" alt="UMSI logo.">
     </div>
     <div>
       <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
     </div>
     <div>
-      <p>Follow Us! <a href="https://x.com/umsi">X</a> | <a href="https://www.instagram.com/umschoolofinformation/#">Instagram</a> | <a href="https://www.facebook.com/uomsi/">Facebook</a> | <a href="https://www.youtube.com/user/schoolofinformation">YouTube</a> | <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all">LinkedIn</a></p>
+      <p><a href="https://x.com/umsi">X</a> | <a href="https://www.instagram.com/umschoolofinformation/#">Instagram</a> | <a href="https://www.facebook.com/uomsi/">Facebook</a> | <a href="https://www.youtube.com/user/schoolofinformation">YouTube</a> | <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all">LinkedIn</a></p>
     </div>
     <div>
       <p>© 2025 Regents of the University of Michigan. All rights reserved.</p>

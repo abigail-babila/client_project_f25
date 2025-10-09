@@ -1,0 +1,218 @@
+body {
+    font-family: Helvetica;
+}
+
+/* HEADER */
+header {
+    background: #00274C;
+    width: 100%;
+    margin: 0;
+}
+
+header img {
+    padding: 20px 20px 10px;
+    height: auto;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    background: white;
+    color: #00274C; /* Dark blue text for contrast */
+    padding: 20px 20px 0px;
+    margin: 0;
+    font-size: 32px;
+    text-align: left;
+}
+
+
+/* SKIP TO MAIN CONTENT */
+/* Default position */
+.skip a {
+  position: absolute;
+  top: -65px;
+}
+
+.skip a:focus {
+  top: 0;
+}
+
+/*Skip properties when focus */
+.skip :focus {
+    color: #00274C;
+    border: 2px solid grey;
+    padding: 20px;
+    background: #eeeeee;
+
+}
+
+/* All properties when focus */
+:focus {
+    border: 2px solid #2F65A7;
+}
+
+/*  !!! NAV BAR - LOOK AT THIS AGAIN !!!*/
+/* nav {
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: left;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+} */
+
+nav {
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    /* Flexbox properties */
+    display: flex;
+    justify-content: left; /* Center the nav items */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Space between nav items */
+}
+
+nav ul li {
+    /* Remove display: inline-block since flex handles layout */
+    margin: 0; /* Remove margin since we're using gap */
+}
+
+nav ul li a {
+    display: block; /* Changed from inline-block */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents text wrapping in nav items */
+}
+
+nav ul li a:hover {
+    color: #FFCB05;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:focus {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    outline: 2px solid #FFCB05;
+    outline-offset: 2px;
+}
+
+nav ul li a[aria-current="page"] {
+    background-color: #FFCB05; /* University of Michigan maize */
+    color: #00274C; /* Dark blue text for contrast */
+    font-weight: bold;
+}
+
+nav ul li a[aria-current="page"]:hover {
+    background-color: #FFCB05; /* Keep same background on hover */
+    color: #00274C; /* Maintain contrast */
+}
+
+nav ul li a[aria-current="page"]:focus {
+    background-color: #FFCB05;
+    color: #00274C;
+    outline: 2px solid #00274C; /* Different outline for current page */
+    outline-offset: 2px;
+}
+
+.container {
+     display: grid;
+     gap: 3px;
+     grid-template-columns:
+          repeat(4, 1fr);
+}
+
+
+/* SECTION */
+section {
+  padding: 20px;
+  margin : 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+  grid-column: 1 / span 4;
+}
+
+.container > :first-child {
+    grid-column: 1/ span 4;
+}
+
+.container > :first-child h1 {
+    color: #00274C;
+    padding: 5px 5px 15px 5px;
+    font-size: 24px;
+}
+
+.container > :first-child p {
+    color: black;
+    padding: 10px;
+}
+
+section img {
+    grid-column: 1 / -1;
+}
+
+
+/* FOOTER */
+footer {
+    background: #00274C;
+    color: white;
+    text-align: center;
+}
+
+footer div {
+    padding: 20px;
+}
+
+footer a {
+    color: #ffcb05;
+}
+
+footer a:hover,
+footer a:active {
+    text-decoration: underline;
+}
+
+footer a:active {
+    text-decoration: underline;
+}
+
+p {
+    padding: 10px;
+}
