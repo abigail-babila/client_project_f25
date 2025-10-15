@@ -2,6 +2,22 @@ body {
     font-family: Helvetica;
 }
 
+p {
+    margin: 15px;
+    font-size: 18px;
+}
+
+ul {
+    padding: 20px;
+    font-size: 18px;
+}
+
+li {
+    padding: 5px 0; /* Vertical spacing between list items */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
 /* HEADER */
 header {
     background: #00274C;
@@ -23,11 +39,22 @@ main img {
 
 header h1 {
     background: white;
-    color: #00274C; /* Dark blue text for contrast */
+    color: #00274C;
     padding: 20px 20px 0px;
     margin: 0;
     font-size: 32px;
     text-align: left;
+}
+
+h2 {
+    color: #00274C;
+    text-align: center;
+    padding: 10px;
+    font-size: 21px;
+}
+
+h3, h4 {
+    font-size: 18px;
 }
 
 
@@ -44,12 +71,23 @@ header h1 {
 
 /*Skip properties when focus */
 .skip :focus {
-    color: #00274C;
-    border: 2px solid grey;
+    color: #00274C; /* Dark blue text instead of black */
+    border: 4px solid #FFCB05; /* Yellow border for high contrast */
     padding: 20px;
-    background: #eeeeee;
-
+    background: #ffffff; /* Pure white background instead of #eeee */
+    outline: 2px solid #FFCB05; /* Additional yellow outline */
+    outline-offset: 2px;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+.skip a:hover {
+    color: #ffffff;
+    background: #00274C;
+    text-decoration: underline;
+}
+    /* <!-- Content taken & modified from Copilot with the prompt, "Modify this Skip to Main Content so that it adheres to WCAG color contrast ratio guidelines
+    Copilot. (2025). October 15, 2025 [Large language model]. --> */
 
 /* All properties when focus */
 :focus {
@@ -105,9 +143,8 @@ nav ul {
     gap: 10px; /* Space between nav items */
 }
 
-nav ul li {
-    /* Remove display: inline-block since flex handles layout */
-    margin: 0; /* Remove margin since we're using gap */
+nav li {
+    padding-left: 20px;
 }
 
 nav ul li a {
@@ -152,25 +189,41 @@ nav ul li a[aria-current="page"]:focus {
     outline-offset: 2px;
 }
 
+/* GRID */
 .container {
      display: grid;
-     gap: 3px;
+     gap: 12px;
+     padding: 16px;
      grid-template-columns:
-          repeat(4, 1fr);
+          repeat(2, 1fr);
 }
-
 
 /* SECTION */
 section {
-  padding: 20px;
-  margin : 15px;
-  border: 1px solid #ccc;
-  text-align: center;
-  grid-column: 1 / span 4;
+  padding: 10px;
+  margin : 10px;
+  /* border: 1px solid #ccc; */
+  text-align: left;
+  grid-column: 1 / -1;
 }
 
-.container > :first-child {
-    grid-column: 1/ span 4;
+#hero,
+.cards,
+.team-section,
+#button,
+section h1,
+section h2 {
+    grid-column: 1 / -1;
+}
+
+section > img {
+    grid-column: 1 / -1;
+    padding: 10px;
+}
+
+section a {
+    text-decoration: underline;
+    color: #2F65A7;
 }
 
 .container > :first-child h1 {
@@ -184,10 +237,168 @@ section {
     padding: 10px;
 }
 
-section img {
+
+/* HOMEPAGE CARD */
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 15px;
+    gap: 20px;
     grid-column: 1 / -1;
 }
 
+.card {
+    min-width: 375px;
+    max-width: 850px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1 1 100%;
+    align-items: flex-start;
+    /* margin: 15px; */
+}
+
+.card h2 {
+    color: #00274C;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.card ul {
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.card li {
+    text-align: left;
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+/* PORTFOLIO PAGE */
+.two-column-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+    padding: 5px;
+
+}
+
+.left-column h2,
+.right-column h2,
+.left-column h3,
+.right-column h3 {
+    color: #00274C;
+    margin-top: 0;
+    text-align: center;  /* Add this */
+    padding: 15px;       /* Add this */
+    font-size: 18px;
+    background: rgba(237, 236, 236, 1); /* Add this - same as .card background */
+    border-radius: 10px; /* Add this - same as .card border-radius */
+}
+
+.left-column h4,
+.right-column h4 {
+    color: #00274C;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.left-column ul,
+.right-column ul {
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.left-column li,
+.right-column li {
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+
+/* BUTTON */
+/* syling the div (positioning, layout) */
+#button {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 0 0 5px;
+}
+
+/* styling the button itself (colors, padding, appearance) */
+.button {
+  background-color: #FFCB05;
+  border: none;
+  color: #00274C;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* TEAM SECTION */
+.team-section {
+    grid-column: 1 / -1;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px 20px; /* 30px row gap, 20px column gap */
+    margin-top: 20px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; Makes images circular */
+    margin-bottom: 15px;
+}
+
+.member-info {
+    color: #00274C;
+    line-height: 1.4;
+}
+
+.member-info strong {
+    font-size: 16px;
+    color: #00274C;
+}
+
+/* FAQ SECTION */
+
+#faq {
+    background-color: #fff5cd;
+}
 
 /* FOOTER */
 footer {
@@ -211,8 +422,4 @@ footer a:active {
 
 footer a:active {
     text-decoration: underline;
-}
-
-p {
-    padding: 10px;
 }
