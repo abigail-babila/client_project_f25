@@ -1,3 +1,5 @@
+/* GENERAL STYLING */
+
 body {
     font-family: Helvetica;
 }
@@ -13,7 +15,7 @@ ul {
 }
 
 li {
-    padding: 5px 0; /* Vertical spacing between list items */
+    padding: 5px 0;
     margin-bottom: 5px;
     text-align: left;
 }
@@ -71,11 +73,11 @@ h3, h4 {
 
 /*Skip properties when focus */
 .skip :focus {
-    color: #00274C; /* Dark blue text instead of black */
-    border: 4px solid #FFCB05; /* Yellow border for high contrast */
+    color: #00274C;
+    border: 4px solid #FFCB05;
     padding: 20px;
-    background: #ffffff; /* Pure white background instead of #eeee */
-    outline: 2px solid #FFCB05; /* Additional yellow outline */
+    background: #ffffff;
+    outline: 2px solid #FFCB05;
     outline-offset: 2px;
     text-decoration: none;
     font-weight: bold;
@@ -94,37 +96,9 @@ h3, h4 {
     border: 2px solid #2F65A7;
 }
 
-/*  !!! NAV BAR - LOOK AT THIS AGAIN !!!*/
-/* nav {
-    color: white;
-    text-align: left;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: left;
-}
-
-nav ul li a {
-    display: inline-block;
-    color: white;
-    text-align: left;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-} */
-
+/* NAVIGATION */
+    /* <!-- Content taken & modified from Copilot with the prompt, "How can I style this navigation so that it's accessible for users in all states"
+    Copilot. (2025). October 15, 2025 [Large language model]. --> */
 nav {
     color: white;
     padding: 10px 0;
@@ -134,13 +108,11 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-    /* Flexbox properties */
     display: flex;
-    justify-content: left; /* Center the nav items */
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 10px; /* Space between nav items */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav li {
@@ -148,7 +120,7 @@ nav li {
 }
 
 nav ul li a {
-    display: block; /* Changed from inline-block */
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -156,7 +128,7 @@ nav ul li a {
     font-weight: 500;
     transition: all 0.3s ease;
     border-radius: 4px;
-    white-space: nowrap; /* Prevents text wrapping in nav items */
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -172,20 +144,20 @@ nav ul li a:focus {
 }
 
 nav ul li a[aria-current="page"] {
-    background-color: #FFCB05; /* University of Michigan maize */
-    color: #00274C; /* Dark blue text for contrast */
+    background-color: #FFCB05;
+    color: #00274C;
     font-weight: bold;
 }
 
 nav ul li a[aria-current="page"]:hover {
-    background-color: #FFCB05; /* Keep same background on hover */
-    color: #00274C; /* Maintain contrast */
+    background-color: #FFCB05;
+    color: #00274C;
 }
 
 nav ul li a[aria-current="page"]:focus {
     background-color: #FFCB05;
     color: #00274C;
-    outline: 2px solid #00274C; /* Different outline for current page */
+    outline: 2px solid #00274C;
     outline-offset: 2px;
 }
 
@@ -202,7 +174,6 @@ nav ul li a[aria-current="page"]:focus {
 section {
   padding: 10px;
   margin : 10px;
-  /* border: 1px solid #ccc; */
   text-align: left;
   grid-column: 1 / -1;
 }
@@ -251,12 +222,11 @@ section a {
 .card {
     min-width: 375px;
     max-width: 850px;
-    background: transparent;
+    background: #eee;
     padding: 10px;
     border-radius: 10px;
     flex: 1 1 100%;
     align-items: flex-start;
-    /* margin: 15px; */
 }
 
 .card h2 {
@@ -299,11 +269,11 @@ section a {
 .right-column h3 {
     color: #00274C;
     margin-top: 0;
-    text-align: center;  /* Add this */
-    padding: 15px;       /* Add this */
+    text-align: center;
+    padding: 15px;
     font-size: 18px;
-    background: rgba(237, 236, 236, 1); /* Add this - same as .card background */
-    border-radius: 10px; /* Add this - same as .card border-radius */
+    background: rgba(237, 236, 236, 1);
+    border-radius: 10px;
 }
 
 .left-column h4,
@@ -328,7 +298,7 @@ section a {
 
 
 /* BUTTON */
-/* syling the div (positioning, layout) */
+/* syling the location (positioning, layout) */
 #button {
     text-align: center;
     grid-column: 1 / -1;
@@ -360,8 +330,8 @@ section a {
 
 .team-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 30px 20px; /* 30px row gap, 20px column gap */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
     margin-top: 20px;
 }
 
@@ -380,7 +350,6 @@ section a {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    /* border-radius: 50%; Makes images circular */
     margin-bottom: 15px;
 }
 
