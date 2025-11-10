@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" href="images/mi-favicon.png" />
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resumes</title>
+</head>
+<body>
+
+  <header>
+    <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+    <img src="images/UMSI_sig-marketing-U.png" alt="UMSI Logo">
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "resume.html">Resume & Cover Letters</a></li>
+            <li><a href = "networking.html">Networking & Connections</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "resources.html" aria-current="page">Resources Request</a></li>
+            <li><a href = "404.html">404</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class = "container" id="main-content">
+    <!-- Hero Image and Intro Section
+    <section id = "hero">
+      <h1>Request Career Resources</h1>
+      <img src="images/Career_Fair_Resources.jpg" alt="Student connecting with an employer at a career fair booth">
+        <p>
+          Still can't find what you're looking for? Request a career resource to the CDO!
+        </p>
+    </section> -->
+    <!-- Resource Suggestion Form -->
+    <!-- Resource Suggestion Form -->
+    <section class="resource-suggestion">
+        <h2>Request Career Resources</h2>
+        <p>Can't find what you're looking for? Submit a request and our CDO team will help you find the resources you need.</p>
+        
+        <form action="https://formspree.io/f/mkgkweoa" method="POST">
+            <fieldset>
+                <legend>Career Resources Request & Suggestions</legend>
+                
+                <!-- Personal Information Section -->
+                <div class="form-section">
+                    <h3>Your Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="student_name">Your Name:</label>
+                        <input type="text" id="student_name" name="student_name" placeholder="Enter Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">U-M Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="academic_program">Academic Level:</label>
+                        <select id="academic_program" name="academic_program">
+                            <option value="">Select</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                            <option value="doctoral">Doctoral</option>
+                            <option value="alumni">Alumni</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="school_program">School or College Affiliation:</label>
+                        <select id="school_program" name="school_program">
+                            <option value="">Select</option>
+                            <option value="information">School of Information</option>
+                            <option value="lsa">College of Literature, Science, and the Arts (LSA)</option>
+                            <option value="engineering">College of Engineering</option>
+                            <option value="business">Ross School of Business</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="major">Major or Degree Program</label>
+                        <textarea id="major" name="major" 
+                                placeholder="Please specify your major, degree concentration, or primary departmental affiliation as shown on your transcript" 
+                                rows="1" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student_year">Year in Program:</label>
+                        <select id="student_year" name="student_year">
+                            <option value="">Select</option>
+                            <option value="first_year">First Year</option>
+                            <option value="second_year">Second Year</option>
+                            <option value="third_year">Third Year</option>
+                            <option value="fourth_year">Fourth Year</option>
+                            <option value="fifth_year">Fifth Year</option>
+                            <option value="alumni">Alumni</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <!-- Resource Request Section -->
+                <div class="form-section">
+                    <h3>Suggested Resource Details</h3>
+
+                    <div class="form-group">
+                        <label for="resource_type">Type of Resource:</label>
+                        <select id="resource_type" name="resource_type" required>
+                            <option value="">Select</option>
+                            <option value="job_boards">Job/Internship Information</option>
+                            <option value="company_info">Company Information</option>
+                            <option value="career_coaching">Career Coaching</option>
+                            <option value="skill_training">Skill Training/Workshops</option>
+                            <option value="networking">Networking Opportunities</option>
+                            <option value="alumni_connect">Connecting With Alumni</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="request_date">Date Needed By (If Applicable):</label>
+                        <input type="date" id="request_date" name="request_date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resource_request">What resource are you requesting or suggesting?</label>
+                        <textarea id="resource_request" name="resource_request" 
+                                placeholder="Please describe the specific resource you need or want to suggest to other students (e.g., 'Need resources for UX jobs in healthcare' or 'Suggest adding Coursera data science courses')" 
+                                rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Options Section -->
+                <div class="form-section">
+                    <h3>Additional Options</h3>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="share_with_others" name="share_with_others" value="yes">
+                        <label for="share_with_others">This resource could be helpful for other students too</label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="follow_up" name="follow_up" value="yes">
+                        <label for="follow_up">I would like a CDO staff member to follow up with me</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <input type="submit" value="Submit Resource Request">
+                </div>
+            </fieldset>
+            <!-- Content taken & modified from UMGPT with the prompt, "What are common survey questions to ask students seeking more resource 
+             ideas for a college career resource. List answer choices that apply to the University of Michigan."
+            UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
+        </form>
+    </section>
+  </main>
+
+  <footer>
+        <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/UMSI_Logo_Footer.png" alt="UMSI logo.">
+        </div>
+        <div class="footer-info">
+            <p>© <span id="year"></span> Regents of the University of Michigan</p>
+            <p>School of Information<br>
+            University of Michigan<br>
+            2200 Hayward Street<br>
+            Ann Arbor, MI 48109</p>
+        </div>
+        <div class="footer-links">
+            <div class="social-links">
+            <a href="https://x.com/umsi" aria-label="Follow us on X">
+                <img src="images/x.png" alt="X logo outlined in white in a black circle">
+            </a>
+            <a href="https://www.instagram.com/umschoolofinformation/#" aria-label="Follow us on Instagram">
+                <img src="images/instagram.png" alt="Instagram logo outlined in white in a black circle">
+            </a>
+            <a href="https://www.facebook.com/uomsi/" aria-label="Follow us on Facebook">
+                <img src="images/facebook.png" alt="Facebook logo outlined in white in a black circle">
+            </a>
+            <a href="https://www.youtube.com/user/schoolofinformation" aria-label="Subscribe to our YouTube">
+                <img src="images/youtube.png" alt="YouTube logo outlined in white in a black circle">
+            </a>
+            <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all" aria-label="Connect with us on LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn logo outlined in white in a black circle">
+            </a>
+            <p><a href="https://umich.instructure.com/courses/137916">Contact Us</a> | <a href="#">Privacy Statement</a></p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  console.log("Footer year updated successfully")
+</script>
+
+</html>

@@ -19,12 +19,14 @@
             <li><a href = "resume.html">Resume & Cover Letters</a></li>
             <li><a href = "networking.html">Networking & Connections</a></li>
             <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "resources.html">Resources Request</a></li>
+            <li><a href = "404.html">404</a></li>
         </ul>
     </nav>
-    <h1>Welcome to the UMSI Career Development Office (CDO)</h1>
   </header>
 
   <main class = "container" id="main-content">
+    <h1>Welcome to the UMSI Career Development Office (CDO)</h1>
     <!-- Hero Image and Intro Section -->
     <section id = "hero">
       <!-- <h2>Your Central Hub for Career Success at UMSI</h2> -->
@@ -155,34 +157,51 @@
 
   <!-- Book an Appointment Button -->
     <div id = "button">
-      <a href="https://docs.google.com/document/d/17iiiupSY-K5QHzd6jtwF2feZfsE90QADjKJkUeldmKM/edit?tab=t.0" class="button">Book an Appointment</a>
+      <a href="https://docs.google.com/document/d/17iiiupSY-K5QHzd6jtwF2feZfsE90QADjKJkUeldmKM/edit?tab=t.0" class="button">Book an Appointment with the CDO</a>
     </div>
 
   </main>
 
   <footer>
-    <div>
-      <img src="images/UMSI_Logo_Footer.png" alt="UMSI logo.">
-    </div>
-    <div>
-      <p><a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-    </div>
-    <div>
-      <p><a href="https://x.com/umsi">X</a> | <a href="https://www.instagram.com/umschoolofinformation/#">Instagram</a> | <a href="https://www.facebook.com/uomsi/">Facebook</a> | <a href="https://www.youtube.com/user/schoolofinformation">YouTube</a> | <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all">LinkedIn</a></p>
-    </div>
-    <div>
-      <p>© 2025 Regents of the University of Michigan. All rights reserved.</p>
-    </div>
-    <div>
-      <p>
-      School of Information<br>
-      University of Michigan<br>
-      2200 Hayward Street<br>
-      Ann Arbor, MI 48109
-      </p>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/UMSI_Logo_Footer.png" alt="UMSI logo.">
+      </div>
+      <div class="footer-info">
+        <p>© <span id="year"></span> Regents of the University of Michigan</p>
+        <p>School of Information<br>
+        University of Michigan<br>
+        2200 Hayward Street<br>
+        Ann Arbor, MI 48109</p>
+      </div>
+      <div class="footer-links">
+        <div class="social-links">
+          <a href="https://x.com/umsi" aria-label="Follow us on X">
+            <img src="images/x.png" alt="X logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.instagram.com/umschoolofinformation/#" aria-label="Follow us on Instagram">
+            <img src="images/instagram.png" alt="Instagram logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.facebook.com/uomsi/" aria-label="Follow us on Facebook">
+            <img src="images/facebook.png" alt="Facebook logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.youtube.com/user/schoolofinformation" aria-label="Subscribe to our YouTube">
+            <img src="images/youtube.png" alt="YouTube logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all" aria-label="Connect with us on LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn logo outlined in white in a black circle">
+          </a>
+          <p><a href="https://umich.instructure.com/courses/137916">Contact Us</a> | <a href="https://www.si.umich.edu/privacy-statement">Privacy Statement</a></p>
+        </div>
+
+      </div>
     </div>
   </footer>
 
 </body>
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  console.log("Footer year updated successfully")
+</script>
 
 </html>

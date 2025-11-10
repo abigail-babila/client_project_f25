@@ -39,7 +39,7 @@ main img {
     margin: 0 auto;
 }
 
-header h1 {
+h1 {
     background: white;
     color: #00274C;
     padding: 20px 20px 0px;
@@ -88,8 +88,8 @@ h3, h4 {
     background: #00274C;
     text-decoration: underline;
 }
-    /* <!-- Content taken & modified from Copilot with the prompt, "Modify this Skip to Main Content so that it adheres to WCAG color contrast ratio guidelines
-    Copilot. (2025). October 15, 2025 [Large language model]. --> */
+/* <!-- Content taken & modified from Copilot with the prompt, "Modify this Skip to Main Content so that it adheres to WCAG color contrast ratio guidelines
+Copilot. (2025). October 15, 2025 [Large language model]. --> */
 
 /* All properties when focus */
 :focus {
@@ -100,8 +100,8 @@ h3, h4 {
     /* <!-- Content taken & modified from Copilot with the prompt, "How can I style this navigation so that it's accessible for users in all states"
     Copilot. (2025). October 15, 2025 [Large language model]. --> */
 nav {
-    color: white;
-    padding: 10px 0;
+    background: #00274C;
+    padding: 0;
 }
 
 nav ul {
@@ -109,56 +109,49 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-nav li {
-    padding-left: 20px;
+    flex-direction: column;
 }
 
 nav ul li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 18px 20px;
     text-decoration: none;
     font-weight: 500;
+    font-size: 16px;
     transition: all 0.3s ease;
-    border-radius: 4px;
-    white-space: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li:last-child a {
+    border-bottom: none;
 }
 
 nav ul li a:hover {
+    background-color: rgba(255, 203, 5, 0.1);
     color: #FFCB05;
-    background: rgba(255, 255, 255, 0.1);
+    padding-left: 25px;
 }
 
 nav ul li a:focus {
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 203, 5, 0.2);
+    color: #FFCB05;
     outline: 2px solid #FFCB05;
-    outline-offset: 2px;
+    outline-offset: -2px;
 }
 
 nav ul li a[aria-current="page"] {
     background-color: #FFCB05;
     color: #00274C;
     font-weight: bold;
+    border-left: 4px solid #00274C;
 }
 
-nav ul li a[aria-current="page"]:hover {
-    background-color: #FFCB05;
-    color: #00274C;
-}
-
+nav ul li a[aria-current="page"]:hover,
 nav ul li a[aria-current="page"]:focus {
     background-color: #FFCB05;
     color: #00274C;
-    outline: 2px solid #00274C;
-    outline-offset: 2px;
+    padding-left: 20px;
 }
 
 /* GRID */
@@ -183,7 +176,8 @@ section {
 .team-section,
 #button,
 section h1,
-section h2 {
+section h2,
+h1 {
     grid-column: 1 / -1;
 }
 
@@ -369,6 +363,159 @@ section a {
     background-color: #fff5cd;
 }
 
+/* RESOURCES SUGGESTION FORM */
+.resource-suggestion {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+.resource-suggestion h2 {
+    color: #00274C;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resource-suggestion p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resource-suggestion form {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resource-suggestion fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-suggestion legend {
+    color: #00274C;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.form-section h3 {
+    color: #00274C;
+    margin: 20px 0 15px 0;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.resource-suggestion label {
+    display: block;
+    color: #00274C;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resource-suggestion input,
+.resource-suggestion select,
+.resource-suggestion textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.resource-suggestion input:focus,
+.resource-suggestion select:focus,
+.resource-suggestion textarea:focus {
+    border-color: #00274C;
+    outline: none;
+}
+
+.resource-suggestion textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.resource-suggestion input[type="submit"] {
+    background-color: #FFCB05;
+    border: none;
+    color: #00274C;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.resource-suggestion input[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+
+/* 404.HTML */
+
+.error-404 {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.error-404 h2 {
+    color: #00274C;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.error-404 p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #666;
+}
+
+.error-number {
+    font-size: 120px;
+    font-weight: bold;
+    color: #FFCB05;
+    text-shadow: 3px 3px 0px #00274C;
+    margin: 20px 0;
+    line-height: 1;
+}
+/* <!-- Content taken & modified from Copilot with the prompt, "How can I style
+this so that there is a blue shadow behind the yellow text" and then copied and
+pasted the code of 404.html
+Copilot. (2025). October 15, 2025 [Large language model]. --> */
+
+
 /* FOOTER */
 footer {
     background: #00274C;
@@ -392,3 +539,147 @@ footer a:active {
 footer a:active {
     text-decoration: underline;
 }
+
+/* BREAKPOINT FOR DESKTOP */
+@media screen and (min-width: 992px) {
+
+    /* creates margin but not for header and footer */
+    main {
+        margin: 0px 100px;
+    }
+
+    /* make nav bar as it was for mobile version but now for desktop */
+    nav {
+        padding: 12px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+        padding: 0 20px;
+    }
+
+    nav ul li a {
+        padding: 12px 18px;
+        border-bottom: none;
+        border-radius: 6px;
+        margin-right: 8px;
+        font-size: 15px;
+        border-left: none;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #FFCB05;
+        padding-left: 18px;
+        transform: translateY(-1px);
+    }
+
+    nav ul li a:focus {
+        background-color: rgba(255, 255, 255, 0.15);
+        outline-offset: 2px;
+        padding-left: 18px;
+    }
+
+    nav ul li a[aria-current="page"] {
+        background-color: #FFCB05;
+        color: #00274C;
+        border-left: none;
+    }
+
+    nav ul li a[aria-current="page"]:hover,
+    nav ul li a[aria-current="page"]:focus {
+        background-color: #FFCB05;
+        color: #00274C;
+        padding-left: 18px;
+        transform: none;
+    }
+
+    /* make grid into four columns */
+    .container {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* INDEX.HTML */
+    /* .cards horizontal side by side */
+    .card {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: 250px;
+        min-width: 200px;
+    }
+
+    /* Meet the CDO Team is in three columns */
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .team-member img {
+        width: 200px;
+        height: 280px;
+    }
+
+    /* FOOTER */
+    /* change footer for desktop */
+    footer {
+        text-align: left;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .footer-logo img {
+        max-height: 100px;
+    }
+
+    .footer-info {
+        padding: 0;
+    }
+
+    .footer-info p {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .footer-links {
+        padding: 0;
+        text-align: right;
+    }
+
+    .footer-links p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .social-links {
+        padding: 20px 0px 20px 20px;
+    }
+
+    .social-links a {
+        margin-left: 10px;
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+    }
+}
+

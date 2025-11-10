@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/mi-favicon.png" />
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>404 - Page Not Found | UMSI CDO</title>
+</head>
+
+<body>
+    <header>
+    <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+    <img src="images/UMSI_sig-marketing-U.png" alt="UMSI Logo">
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "resume.html">Resume & Cover Letters</a></li>
+            <li><a href = "networking.html">Networking & Connections</a></li>
+            <li><a href = "portfolio.html">Portfolio</a></li>
+            <li><a href = "resources.html">Resources Request</a></li>
+            <li><a href = "404.html" aria-current="page">404</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class = "container" id="main-content">
+    <section class="error-404">
+        <div class="error-label">ERROR</div>
+        <div class="error-number">404</div>
+        <h2>This Page is Outside of Our Career Network</h2>
+        <p>Don't worry - even the best career paths sometimes lead to unexpected places.<br>Try going back to our homepage to get back on track.</p>
+        <div id = "button">
+            <a href="index.html" class="button">Go to Homepage</a>
+        </div>
+        <p>OR</p>
+        <p>Take a study break and slip into a happy place for a little bit.</p>
+        <div id = "button">
+            <a href="https://www.youtube.com/watch?v=rJaFMq66WQI&list=RDrJaFMq66WQI&start_radio=1" class="button">Mr. Brightside at a Night Game</a>
+        </div>
+        <div class="error-image">
+          <img src="images/michigan_mascot.png" alt="UMSI students collaborating">
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/UMSI_Logo_Footer.png" alt="UMSI logo.">
+      </div>
+      <div class="footer-info">
+        <p>© <span id="year"></span> Regents of the University of Michigan</p>
+        <p>School of Information<br>
+        University of Michigan<br>
+        2200 Hayward Street<br>
+        Ann Arbor, MI 48109</p>
+      </div>
+      <div class="footer-links">
+        <div class="social-links">
+          <a href="https://x.com/umsi" aria-label="Follow us on X">
+            <img src="images/x.png" alt="X logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.instagram.com/umschoolofinformation/#" aria-label="Follow us on Instagram">
+            <img src="images/instagram.png" alt="Instagram logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.facebook.com/uomsi/" aria-label="Follow us on Facebook">
+            <img src="images/facebook.png" alt="Facebook logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.youtube.com/user/schoolofinformation" aria-label="Subscribe to our YouTube">
+            <img src="images/youtube.png" alt="YouTube logo outlined in white in a black circle">
+          </a>
+          <a href="https://www.linkedin.com/school/university-of-michigan---school-of-information/posts/?feedView=all" aria-label="Connect with us on LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn logo outlined in white in a black circle">
+          </a>
+          <p><a href="https://umich.instructure.com/courses/137916">Contact Us</a> | <a href="#">Privacy Statement</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  console.log("Footer year updated successfully")
+</script>
+
+</html>
